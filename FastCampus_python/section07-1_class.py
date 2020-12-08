@@ -71,11 +71,20 @@ user3 = WareHouse('Lee')
 print(user1.__dict__)
 print(user2.__dict__)
 print(user3.__dict__)
-print(WareHouse.__dict__)
+print(WareHouse.__dict__) # 클래스 네임스페이스, 클래스 변수(공유)
 
 print(user1.name)
 print(user2.name)
 print(user3.name)
 
-# 자기 네임스페이스에 없으면 클래스의
+# 자기 네임스페이스에 없으면 클래스의 네임스페이스에 가서 찾음
 print(user1.stock_num)
+print(user2.stock_num)
+print(user3.stock_num)
+
+del user1
+
+print(user2.stock_num)
+
+# 클래스변수 = 하나의 변수로 모든 인스턴스의 값을 조정가능한 예도 가능
+# 모든 인스턴스가 하나의 변수를 참조가능하기때문에
