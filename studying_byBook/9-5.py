@@ -10,7 +10,7 @@ n, m, c = map(int, input().split())     # c = start point
 graph = [ [] for i in range(n+1) ]
 distance = [INF] * (n+1)
 
-for i in range(nm:
+for i in range(nm):
     x, y, z = map(int, input().split())
     graph[x].append((y,z))              # x -> y, cost = z
 
